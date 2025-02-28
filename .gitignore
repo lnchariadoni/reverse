@@ -63,3 +63,4 @@ replay_pid*
 ### Mac OS ###
 .DS_Store
 /.idea/codeStyles/codeStyleConfig.xml
+.idea
