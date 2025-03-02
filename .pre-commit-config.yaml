@@ -1,0 +1,36 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args: ['--baseline', '.secrets.baseline']
+
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.37.0 # use latest stable tag
+    hooks:
+      - id: markdownlint
+
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.22
+    hooks:
+      - id: mdformat
+        additional_dependencies: [mdformat-gfm, mdformat-frontmatter, mdformat-footnote]
+
+  - repo: local
+    hooks:
+      - id: spotless-check
+        name: spotless run
+        entry: ./git_hooks/pre-commit-spotless.sh
+        language: script
