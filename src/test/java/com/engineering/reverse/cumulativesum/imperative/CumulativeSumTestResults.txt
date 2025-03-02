@@ -1,0 +1,9 @@
+
+Elapsed using loop for small input list:0h 0m 0s 0ms
+Elapsed using stream array for small input list:0h 0m 0s 1ms
+Elapsed using stream list for small input list:0h 0m 0s 0ms
+Elapsed using executor service for small input list:0h 0m 0s 0ms
+
+Elapsed using loop for 5 million input list:0h 0m 0s 112ms
+Elapsed using stream list for 5 million input list:0h 0m 0s 93ms
+Elapsed using executor service for 5 million input list:0h 0m 0s 650ms

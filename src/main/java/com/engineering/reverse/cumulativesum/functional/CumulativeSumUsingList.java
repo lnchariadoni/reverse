@@ -9,7 +9,6 @@ public class CumulativeSumUsingList {
     Objects.requireNonNull(inputList, "Input list can not be null");
 
     return inputList.stream()
-        //                .parallel()
         .collect(
             () -> new ArrayList<Long>(),
             (cumm, element) -> {
