@@ -40,14 +40,20 @@ to contribute to this Java project using Maven and Git hooks.
    pre-commit install
    ```
 
-   -
-
 1. **Maven Build:**
 
    - Build the project using Maven to download dependencies and compile the code:
 
    ```bash
    mvn clean install
+   ```
+
+1. **Manual run of pre-commit:**
+
+   - You can run the pre-commit checks manually, before `git commit ....`
+
+   ```bash
+   pre-commit run --all-files
    ```
 
 ## Understanding Git Hooks
